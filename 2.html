@@ -1,0 +1,24 @@
+<html>
+<head>
+<title>Project euler problem 2</title>
+</head>
+<body>
+<script type="text/javascript">
+	var first=1;
+	var second =2;
+	var sum =0;
+	var add = 0;
+	while (second < 56){
+		add = first+second;
+		first = second;
+		second = add;
+		console.log(add);
+		if (add%2 == 0){
+			sum = sum+add;
+		}
+	}
+	document.write(sum+2);
+</script>
+<div id ="answer"></div>
+</body>
+</html>
