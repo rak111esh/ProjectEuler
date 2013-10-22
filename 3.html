@@ -1,0 +1,25 @@
+<html>
+<head>
+<title>Project euler problem 3</title>
+</head>
+<body>
+<script type="text/javascript">
+	var n = 600851475143;
+	var sqrt = Math.round(Math.sqrt(600851475143 ));
+	var p = 1;
+	for (var i=3;i <sqrt;i+=2){
+		if(n%i==0){
+			p = i;
+			n = n/i;
+		}
+		while(n%i == 0){
+			n = n/i;
+		}
+		if(p < n){p = n;}
+	}
+
+	document.write(p);
+</script>
+<div id ="answer"></div>
+</body>
+</html>
