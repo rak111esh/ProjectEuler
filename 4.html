@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>Project Euler problem4</title>
+</head>
+
+<body>
+<script>
+var num;
+var max = 0;
+function checkPa(pa){
+	var x = parseInt(pa.toString().split('').reverse().join(''));
+	if(x==pa)
+		return true;
+	else
+		return false;
+}
+
+for(var i =100;i<1000;i++){
+	for(var j = 100; j<1000;j++){
+		num = i*j;
+		if(checkPa(num)){
+			if(max<num){
+				max=num;
+			}
+		}
+	}
+}
+
+document.write(max);
+</script>
+</body>
+</html>
