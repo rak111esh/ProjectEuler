@@ -1,0 +1,31 @@
+<html>
+<head>
+<title>Project euler problem 3</title>
+</head>
+<body>
+<script type="text/javascript">
+var sieve = new Array();
+var i = 0;
+var maxsieve = 2000000;
+var prime = 0;
+var sum = 0;
+for (i = 2; i <= maxsieve; i++)
+{
+    sieve[i] = 1;
+}
+
+for (prime = 2; prime <= maxsieve ; prime++)
+{
+    if (sieve[prime] == 1)
+    {
+        sum += prime;
+        for (i = prime * 2; i <= maxsieve; i += prime)
+        {
+            sieve[i] = 0;
+        }
+    }
+}
+document.write(sum);
+</script>
+</body>
+</html>
